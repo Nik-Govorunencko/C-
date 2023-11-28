@@ -4,10 +4,9 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Введите три параметра. Первый - число, второй - число, третий - тип вычесления (+; -; /; *) ");
-            int num1 = int.Parse(Console.ReadLine());
-            int num2 = int.Parse(Console.ReadLine());
-            string typeOfSolv = Console.ReadLine();
+            int.TryParse(args[0], out int num1);
+            int.TryParse(args[2], out int num2);
+            string typeOfSolv = args[1];
             int result = 0;
             if (typeOfSolv == "+")
             {
